@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ariagamingfr — Tests, guides et gameplay en français. Retrouve toutes mes vidéos YouTube et mes tests écrits sur Medium en un seul endroit.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Ariagamingfr — Gaming YouTube & Tests">
+<meta property="og:description" content="Tests, guides et gameplay par Ariagamingfr — La Réunion 974">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ariagamingfr.netlify.app">
+<title>Ariagamingfr — Gaming, Tests & Gameplay en français</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #080810;
+    --surface: #10101e;
+    --surface2: #18182a;
+    --accent: #e8ff3b;
+    --accent2: #ff5c5c;
+    --text: #f2f2f0;
+    --muted: #7a7a96;
+    --border: rgba(255,255,255,0.06);
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Outfit', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; overflow-x: hidden; }
+  body::before { content: ''; position: fixed; inset: 0; background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.012) 2px, rgba(255,255,255,0.012) 4px); pointer-events: none; z-index: 0; }
+
+  nav { display: flex; align-items: center; justify-content: space-between; padding: 1.1rem 2rem; border-bottom: 1px solid var(--border); position: sticky; top: 0; background: rgba(8,8,16,0.9); backdrop-filter: blur(12px); z-index: 100; }
+  .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.15rem; color: var(--accent); letter-spacing: -0.5px; }
+  .logo span { color: var(--accent2); }
+  .nav-links { display: flex; gap: 2rem; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.82rem; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 500; transition: color 0.2s; cursor: pointer; }
+  .nav-links a:hover { color: var(--accent); }
+
+  .hero { position: relative; padding: 6rem 2rem 5rem; max-width: 860px; margin: 0 auto; text-align: center; z-index: 1; }
+  .hero-tag { display: inline-block; font-size: 0.72rem; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); border: 1px solid rgba(232,255,59,0.3); padding: 4px 14px; border-radius: 20px; margin-bottom: 1.5rem; font-weight: 500; }
+  .hero h1 { font-family: 'Syne', sans-serif; font-size: clamp(2.8rem, 7vw, 5rem); font-weight: 800; line-height: 1.0; margin-bottom: 1.5rem; letter-spacing: -2px; }
+  .hero h1 .hl { color: var(--accent); }
+  .hero h1 .hl2 { color: var(--accent2); }
+  .hero p { color: var(--muted); font-size: 1.05rem; line-height: 1.75; max-width: 520px; margin: 0 auto 2.5rem; }
+  .btn-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 0.75rem 1.6rem; border-radius: 8px; font-size: 0.88rem; font-weight: 500; text-decoration: none; transition: opacity 0.2s, transform 0.15s; font-family: 'Outfit', sans-serif; }
+  .btn:hover { opacity: 0.85; transform: translateY(-2px); }
+  .btn-yt { background: var(--accent2); color: #fff; }
+  .btn-medium { background: var(--surface2); color: var(--text); border: 1px solid var(--border); }
+  .btn-medium:hover { border-color: var(--accent); color: var(--accent); }
+
+  .stats-bar { display: flex; justify-content: center; gap: 3rem; padding: 2.5rem 2rem; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); position: relative; z-index: 1; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat-n { font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 800; color: var(--accent); display: block; letter-spacing: -1px; }
+  .stat-l { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1.5px; margin-top: 2px; }
+
+  .section { max-width: 1080px; margin: 0 auto; padding: 4rem 2rem; position: relative; z-index: 1; }
+  .section-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem; }
+  .section-title { font-family: 'Syne', sans-serif; font-size: 1.3rem; font-weight: 800; letter-spacing: -0.5px; }
+  .section-title .dot { color: var(--accent); }
+  .see-all { font-size: 0.78rem; color: var(--muted); text-decoration: none; letter-spacing: 1px; text-transform: uppercase; transition: color 0.2s; }
+  .see-all:hover { color: var(--accent); }
+  .divider { border: none; border-top: 1px solid var(--border); }
+
+  .video-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+  @media (max-width: 700px) { .video-grid { grid-template-columns: 1fr; } nav .nav-links { gap: 1rem; } }
+  .video-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; text-decoration: none; color: var(--text); display: block; transition: border-color 0.2s, transform 0.2s; }
+  .video-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+  .video-thumb { aspect-ratio: 16/9; background: var(--surface2); position: relative; overflow: hidden; }
+  .video-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .play-overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3); opacity: 0; transition: opacity 0.2s; }
+  .video-card:hover .play-overlay { opacity: 1; }
+  .play-circle { width: 48px; height: 48px; background: var(--accent2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem; padding-left: 3px; }
+  .video-info { padding: 1rem; }
+  .video-title { font-size: 0.85rem; font-weight: 500; line-height: 1.45; margin-bottom: 0.5rem; }
+  .video-meta { font-size: 0.72rem; color: var(--muted); display: flex; align-items: center; justify-content: space-between; }
+  .tag { font-size: 0.62rem; padding: 2px 8px; border-radius: 20px; letter-spacing: 0.5px; text-transform: uppercase; font-weight: 500; }
+  .tag-test { background: rgba(255,92,92,0.15); color: var(--accent2); }
+  .tag-guide { background: rgba(232,255,59,0.12); color: var(--accent); }
+  .tag-actu { background: rgba(100,180,255,0.12); color: #64b4ff; }
+
+  .article-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  @media (max-width: 600px) { .article-grid { grid-template-columns: 1fr; } }
+  .article-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; text-decoration: none; color: var(--text); display: flex; flex-direction: column; transition: border-color 0.2s, transform 0.2s; }
+  .article-card:hover { border-color: rgba(232,255,59,0.4); transform: translateY(-3px); }
+  .article-img { aspect-ratio: 16/7; background: var(--surface2); overflow: hidden; }
+  .article-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s; }
+  .article-card:hover .article-img img { transform: scale(1.04); }
+  .article-body { padding: 1.2rem; display: flex; flex-direction: column; gap: 0.6rem; flex: 1; }
+  .article-top { display: flex; align-items: center; justify-content: space-between; }
+  .article-date { font-size: 0.7rem; color: var(--muted); }
+  .article-title { font-size: 0.92rem; font-weight: 500; line-height: 1.5; }
+  .article-excerpt { font-size: 0.8rem; color: var(--muted); line-height: 1.65; }
+  .article-footer { display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 0.75rem; border-top: 1px solid var(--border); }
+  .read-time { font-size: 0.7rem; color: var(--muted); }
+  .read-link { font-size: 0.72rem; color: var(--accent); }
+
+  .about-box { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 2.5rem; display: flex; gap: 2rem; align-items: flex-start; }
+  @media (max-width: 600px) { .about-box { flex-direction: column; } }
+  .avatar { width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, var(--accent2), var(--accent)); display: flex; align-items: center; justify-content: center; font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.6rem; color: #080810; flex-shrink: 0; }
+  .about-text h2 { font-family: 'Syne', sans-serif; font-size: 1.2rem; font-weight: 800; margin-bottom: 0.75rem; }
+  .about-text p { font-size: 0.88rem; color: var(--muted); line-height: 1.75; margin-bottom: 1rem; }
+  .social-links { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .social-btn { display: inline-flex; align-items: center; gap: 6px; padding: 0.45rem 1rem; border-radius: 6px; font-size: 0.78rem; font-weight: 500; text-decoration: none; border: 1px solid var(--border); color: var(--text); transition: border-color 0.2s, color 0.2s; }
+  .social-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+  footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; position: relative; z-index: 1; }
+  .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1rem; flex-wrap: wrap; }
+  .footer-links a { color: var(--muted); text-decoration: none; font-size: 0.78rem; letter-spacing: 1px; text-transform: uppercase; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--accent); }
+  .footer-copy { font-size: 0.7rem; color: var(--muted); }
+
+  .legal { max-width: 700px; margin: 0 auto; padding: 3rem 2rem; position: relative; z-index: 1; display: none; }
+  .legal h2 { font-family: 'Syne', sans-serif; font-size: 1.3rem; font-weight: 800; margin-bottom: 1.5rem; }
+  .legal h3 { font-size: 0.9rem; font-weight: 500; color: var(--accent); margin: 1.5rem 0 0.5rem; text-transform: uppercase; letter-spacing: 1px; }
+  .legal p { font-size: 0.85rem; color: var(--muted); line-height: 1.75; }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  .hero { animation: fadeUp 0.6s ease both; }
+  .stats-bar { animation: fadeUp 0.6s ease 0.1s both; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Aria<span>gaming</span>fr</div>
+  <div class="nav-links">
+    <a href="#videos">Vidéos</a>
+    <a href="#articles">Articles</a>
+    <a href="#apropos">À propos</a>
+    <a href="#" onclick="toggleLegal(event)">Mentions légales</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <span class="hero-tag">Tests &amp; Gameplay · France </span>
+  <h1><span class="hl">Gaming</span><br>Tests <span class="hl2">Gameplay</span></h1>
+  <p>Joueuse depuis l'époque de LucasArts et Sierra. Tests , guides et gameplay de jeux indépendants — entièrement en français.</p>
+  <div class="btn-row">
+    <a class="btn btn-yt" href="https://www.youtube.com/@ariagamingfr" target="_blank" rel="noopener">▶ Chaîne YouTube</a>
+    <a class="btn btn-medium" href="https://medium.com/@ariagamingfr" target="_blank" rel="noopener">✍ Articles Medium</a>
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="stat"><span class="stat-n">7</span><span class="stat-l">Vidéos</span></div>
+  <div class="stat"><span class="stat-n">2</span><span class="stat-l">Tests écrits</span></div>
+  <div class="stat"><span class="stat-n">FR</span><span class="stat-l">100% français</span></div>
+  <div class="stat"><span class="stat-n">FR</span><span class="stat-l">France</span></div>
+</div>
+
+<hr class="divider">
+
+<!-- VIDÉOS -->
+<section class="section" id="videos">
+  <div class="section-head">
+    <h2 class="section-title">Mes vidéos<span class="dot">.</span></h2>
+    <a class="see-all" href="https://www.youtube.com/@ariagamingfr" target="_blank" rel="noopener">Tout voir →</a>
+  </div>
+  <div class="video-grid">
+
+    <a class="video-card" href="https://youtu.be/6rOypDFm__U" target="_blank" rel="noopener">
+      <div class="video-thumb">
+        <img src="https://img.youtube.com/vi/6rOypDFm__U/mqdefault.jpg" alt="Outward 2 Beta : Tout ce qu'il faut savoir pour survivre">
+        <div class="play-overlay"><div class="play-circle">▶</div></div>
+      </div>
+      <div class="video-info">
+        <p class="video-title">Outward 2 Beta : Tout ce qu'il faut savoir pour survivre | GUIDE Gameplay français</p>
+        <div class="video-meta"><span class="tag tag-guide">Guide</span><span>Outward 2</span></div>
+      </div>
+    </a>
+
+    <a class="video-card" href="https://youtu.be/bqp1fVR527g" target="_blank" rel="noopener">
+      <div class="video-thumb">
+        <img src="https://img.youtube.com/vi/bqp1fVR527g/mqdefault.jpg" alt="Vidéo Ariagamingfr">
+        <div class="play-overlay"><div class="play-circle">▶</div></div>
+      </div>
+      <div class="video-info">
+        <p class="video-title">Voir sur YouTube</p>
+        <div class="video-meta"><span class="tag tag-test">Test</span><span>Ariagamingfr</span></div>
+      </div>
+    </a>
+
+    <a class="video-card" href="https://youtu.be/ISSc8oM8jXw" target="_blank" rel="noopener">
+      <div class="video-thumb">
+        <img src="https://img.youtube.com/vi/ISSc8oM8jXw/mqdefault.jpg" alt="Vidéo Ariagamingfr">
+        <div class="play-overlay"><div class="play-circle">▶</div></div>
+      </div>
+      <div class="video-info">
+        <p class="video-title">Voir sur YouTube</p>
+        <div class="video-meta"><span class="tag tag-test">Test</span><span>Ariagamingfr</span></div>
+      </div>
+    </a>
+
+    <a class="video-card" href="https://youtu.be/TXwnMiNSGrE" target="_blank" rel="noopener">
+      <div class="video-thumb">
+        <img src="https://img.youtube.com/vi/TXwnMiNSGrE/mqdefault.jpg" alt="Vidéo Ariagamingfr">
+        <div class="play-overlay"><div class="play-circle">▶</div></div>
+      </div>
+      <div class="video-info">
+        <p class="video-title">Voir sur YouTube</p>
+        <div class="video-meta"><span class="tag tag-actu">Gaming</span><span>Ariagamingfr</span></div>
+      </div>
+    </a>
+
+    <a class="video-card" href="https://youtu.be/DoY4sIuGMzU" target="_blank" rel="noopener">
+      <div class="video-thumb">
+        <img src="https://img.youtube.com/vi/DoY4sIuGMzU/mqdefault.jpg" alt="Test Aether and Iron">
+        <div class="play-overlay"><div class="play-circle">▶</div></div>
+      </div>
+      <div class="video-info">
+        <p class="video-title">Test Aether and Iron — gameplay vidéo</p>
+        <div class="video-meta"><span class="tag tag-test">Test</span><span>Aether and Iron</span></div>
+      </div>
+    </a>
+
+    <a class="video-card" href="https://youtu.be/dwuYf5HIyOU" target="_blank" rel="noopener">
+      <div class="video-thumb">
+        <img src="https://img.youtube.com/vi/dwuYf5HIyOU/mqdefault.jpg" alt="Test The Séance of Blake Manor">
+        <div class="play-overlay"><div class="play-circle">▶</div></div>
+      </div>
+      <div class="video-info">
+        <p class="video-title">Test The Séance of Blake Manor — gameplay vidéo</p>
+        <div class="video-meta"><span class="tag tag-test">Test</span><span>Blake Manor</span></div>
+      </div>
+    </a>
+
+    <a class="video-card" href="https://youtu.be/RQAGFvoOGUQ" target="_blank" rel="noopener">
+      <div class="video-thumb">
+        <img src="https://img.youtube.com/vi/RQAGFvoOGUQ/mqdefault.jpg" alt="Vidéo Ariagamingfr">
+        <div class="play-overlay"><div class="play-circle">▶</div></div>
+      </div>
+      <div class="video-info">
+        <p class="video-title">Voir sur YouTube</p>
+        <div class="video-meta"><span class="tag tag-actu">Gaming</span><span>Ariagamingfr</span></div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ARTICLES -->
+<section class="section" id="articles">
+  <div class="section-head">
+    <h2 class="section-title">Mes articles<span class="dot">.</span></h2>
+    <a class="see-all" href="https://medium.com/@ariagamingfr" target="_blank" rel="noopener">Tout voir →</a>
+  </div>
+  <div class="article-grid">
+
+    <a class="article-card" href="https://medium.com/@ariagamingfr/test-de-aether-and-iron-un-rpg-%C3%A0-la-disco-elysium-o%C3%B9-lon-combat-en-voiture-33e658278f9b" target="_blank" rel="noopener">
+      <div class="article-img">
+        <img src="https://miro.medium.com/v2/resize:fit:800/1*atst_LeQ0FjzqtT6sRIjRw.png" alt="Aether and Iron">
+      </div>
+      <div class="article-body">
+        <div class="article-top">
+          <span class="tag tag-test">Test écrit</span>
+          <span class="article-date">Mai 2026</span>
+        </div>
+        <p class="article-title">Test de Aether and Iron : Un RPG à la Disco Elysium où l'on combat en voiture</p>
+        <p class="article-excerpt">Un RPG indépendant qui mélange profondeur narrative et combats tactiques en véhicules dans un New York flottant des années 30.</p>
+        <div class="article-footer">
+          <span class="read-time">⏱ 5 min de lecture</span>
+          <span class="read-link">Lire →</span>
+        </div>
+      </div>
+    </a>
+
+    <a class="article-card" href="https://medium.com/@ariagamingfr/the-s%C3%A9ance-of-blake-manor-indie-game-review-fr-c8e2cee0cb48" target="_blank" rel="noopener">
+      <div class="article-img">
+        <img src="https://miro.medium.com/v2/resize:fit:800/1*b32aZTtcrXtaCV-YXr54eg.png" alt="The Séance of Blake Manor">
+      </div>
+      <div class="article-body">
+        <div class="article-top">
+          <span class="tag tag-test">Test écrit</span>
+          <span class="article-date">Mai 2026</span>
+        </div>
+        <p class="article-title">The Séance of Blake Manor — Indie game REVIEW FR</p>
+        <p class="article-excerpt">Un jeu d'aventure narratif à la première personne mêlant enquête et surnaturel dans un manoir victorien irlandais. Par les créateurs de The Dark Side Detective.</p>
+        <div class="article-footer">
+          <span class="read-time">⏱ 5 min de lecture</span>
+          <span class="read-link">Lire →</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- À PROPOS -->
+<section class="section" id="apropos">
+  <div class="section-head">
+    <h2 class="section-title">À propos<span class="dot">.</span></h2>
+  </div>
+  <div class="about-box">
+    <div class="avatar">
+  <img src="logo.png" alt="Aria Gaming FR" style="width:100%; height:100%; object-fit:cover; border-radius:50%;">
+</div>
+    <div class="about-text">
+      <h2>Aria Gaming FR</h2>
+      <p>Joueuse depuis l'époque de LucasArts, Sierra, Benoît Sokal et des premiers City Builders — autant dire que j'ai vu l'évolution du gaming. Basée à La Réunion 🌴, je partage ma passion à travers des vidéos YouTube et des tests écrits sur Medium, entièrement en français.</p>
+      <p>Ma spécialité : les jeux indépendants, les RPG narratifs et les jeux d'aventure. Tests honnêtes, analyses approfondies, zéro clickbait.</p>
+      <div class="social-links">
+        <a class="social-btn" href="https://www.youtube.com/@ariagamingfr" target="_blank" rel="noopener">▶ YouTube</a>
+        <a class="social-btn" href="https://medium.com/@ariagamingfr" target="_blank" rel="noopener">✍ Medium</a>
+        <a class="social-btn" href="mailto:contact@ariagamingfr.fr">✉ Contact</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENTIONS LÉGALES -->
+<div class="legal" id="legal">
+  <h2>Mentions légales</h2>
+  <h3>Éditeur du site</h3>
+  <p>Ce site est édité par Aria Gaming FR, créatrice de contenu indépendante basée en France (974), France.</p>
+  <p>Contact : <a href="mailto:contact@ariagamingfr.fr" style="color:var(--accent)">contact@ariagamingfr.fr</a></p>
+  <h3>Hébergement</h3>
+  <p>Ce site est hébergé par Netlify, Inc. — 512 2nd Street, Suite 200, San Francisco, CA 94107, États-Unis.</p>
+  <h3>Propriété intellectuelle</h3>
+  <p>L'ensemble du contenu de ce site (textes, vidéos, images) est la propriété exclusive d'Aria Gaming FR, sauf mention contraire. Toute reproduction est interdite sans autorisation.</p>
+  <h3>Données personnelles</h3>
+  <p>Ce site ne collecte aucune donnée personnelle. Aucun cookie de tracking n'est utilisé.</p>
+  <h3>Liens externes</h3>
+  <p>Ce site contient des liens vers YouTube (Google LLC) et Medium. Aria Gaming FR n'est pas responsable du contenu de ces plateformes tierces.</p>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="https://www.youtube.com/@ariagamingfr" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://medium.com/@ariagamingfr" target="_blank" rel="noopener">Medium</a>
+    <a href="#apropos">À propos</a>
+    <a href="#" onclick="toggleLegal(event)">Mentions légales</a>
+  </div>
+  <p class="footer-copy">© 2026 Aria Gaming FR · Tests &amp; Analyses Gaming en français · La Réunion 🌴</p>
+</footer>
+
+<script>
+function toggleLegal(e) {
+  e.preventDefault();
+  var el = document.getElementById('legal');
+  el.style.display = el.style.display === 'block' ? 'none' : 'block';
+  if (el.style.display === 'block') el.scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+</body>
+</html>
