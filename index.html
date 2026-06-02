@@ -117,7 +117,35 @@
   @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
   .hero { animation: fadeUp 0.6s ease both; }
   .stats-bar { animation: fadeUp 0.6s ease 0.1s both; }
+
+<style>
+.guide-btn {
+  display: inline-block;
+  margin: 20px auto;
+  padding: 14px 20px;
+  background: #ff5500;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.guide-btn:hover {
+  background: #ff7733;
+}
+
+ h2 {
+  text-align: center;
+}
+
+.guide-btn {
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+}
 </style>
+
 
  <script type="application/ld+json">
 {
@@ -394,7 +422,7 @@ function toggleLegal(e) {
 
 <h2>Mes guides</h2>
 
-<a href="guide-manor-lords.html">
+<a href="guide-manor-lords.html" class="guide-btn">
   Guide Manor Lords
 </a>
 
