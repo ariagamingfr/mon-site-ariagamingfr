@@ -156,7 +156,7 @@
     /* FOOTER */
     footer { border-top: 1px solid var(--border); padding: 3rem 2rem; text-align: center; position: relative; z-index: 1; background: #070607; }
     .footer-links { display: flex; justify-content: center; gap: 2.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
-    .footer-links a { color: var(--muted); text-decoration: none; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; font-weight: 600; transition: color 0.2s; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; font-weight: 600; transition: color 0.2s; cursor: pointer; }
     .footer-links a:hover { color: var(--accent); }
     .footer-copy { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.5px; }
 
@@ -531,7 +531,7 @@
   </div>
 </section>
 
-<!-- MENTIONS LÉGALES TERMINÉES -->
+<!-- MENTIONS LÉGALES SÉCURISÉES -->
 <div class="legal" id="legal">
   <h2>Mentions légales</h2>
   <h3>Éditeur du site</h3>
@@ -540,31 +540,33 @@
   <h3>Hébergement</h3>
   <p>Ce site est hébergé par GitHub Pages, service fourni par GitHub, Inc., 88 Colin P. Kelly Jr Street, San Francisco, CA 94107, États-Unis.</p>
   <h3>Propriété intellectuelle</h3>
-  <p>L'ensemble du contenu de ce site (textes, vidéos, images) est protégé par le droit d'auteur. Toute reproduction sans accord préalable est interdite.</p>
+  <p>L'ensemble du contenu de ce site (textes, vidéos, images) est protégé par le droit d'auteur. Toute reproduction ou distribution non autorisée est strictement interdite.</p>
 </div>
 
-<!-- FOOTER LOGIQUE ET PROPRE -->
+<!-- COMPLÉMENT DU PIED DE PAGE (FOOTER) -->
 <footer>
   <div class="footer-links">
     <a href="#videos">Vidéos</a>
     <a href="#articles">Articles</a>
     <a href="#apropos">À propos</a>
-    <a href="#" onclick="toggleLegal(event)">Mentions Légales</a>
+    <a href="#" onclick="toggleLegal(event)">Mentions légales</a>
   </div>
   <p class="footer-copy">&copy; 2026 AriaGamingFR. Tous droits réservés. Propulsé par GitHub Pages.</p>
 </footer>
 
-<!-- SCRIPT POUR FAIRE FONCTIONNER L'AFFICHAGE DU BLOC MENTIONS LEGALES -->
+<!-- SCRIPT DE NAVIGATION POUR LES MENTIONS LÉGALES -->
 <script>
   function toggleLegal(event) {
     event.preventDefault();
-    const legalBlock = document.getElementById('legal');
-    if (legalBlock.style.display === 'block') {
-      legalBlock.style.display = 'none';
+    const legalSection = document.getElementById('legal');
+    
+    if (legalSection.style.display === 'block') {
+      legalSection.style.display = 'none';
+      // Remonter légèrement si l'on ferme pour éviter un sursaut visuel
       window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
     } else {
-      legalBlock.style.display = 'block';
-      legalBlock.scrollIntoView({ behavior: 'smooth' });
+      legalSection.style.display = 'block';
+      legalSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
 </script>
