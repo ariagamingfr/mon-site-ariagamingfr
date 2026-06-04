@@ -556,17 +556,14 @@
 
 <!-- SCRIPT DE NAVIGATION POUR LES MENTIONS LÉGALES -->
 <script>
-  function toggleLegal(event) {
+function toggleLegal(event) {
     event.preventDefault();
     const legalSection = document.getElementById('legal');
-    
     if (legalSection.style.display === 'block') {
       legalSection.style.display = 'none';
-      // Remonter légèrement si l'on ferme pour éviter un sursaut visuel
-      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
     } else {
       legalSection.style.display = 'block';
-      legalSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      legalSection.scrollIntoView({ behavior: 'smooth' });
     }
   }
 </script>
