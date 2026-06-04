@@ -128,11 +128,6 @@ h2{
   margin:15px 0;
 }
 
-@media(max-width:900px){
-  .wrapper{flex-direction:column;}
-  .sidebar{width:100%;position:relative;}
-  .video-hero{flex-direction:column;}
-  
 .guide-image{
   width: 260px;
   max-width: 100%;
@@ -143,6 +138,26 @@ h2{
   object-fit: cover;
   border: 1px solid #2a2a2a;
   box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+@media (max-width: 900px){
+  .wrapper{
+    flex-direction: column;
+  }
+
+  .sidebar{
+    width: 100%;
+    position: relative;
+  }
+
+  .video-hero{
+    flex-direction: column;
+  }
+
+  .guide-image{
+    width: 220px;
+    height: 140px;
+  
 
 }
   
