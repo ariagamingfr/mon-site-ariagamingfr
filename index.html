@@ -24,7 +24,6 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     
-    /* NOUVELLE PALETTE HARMONISÉE AVEC LOGO.PNG */
     :root {
       --bg: #0b090a;
       --surface: #161214;
@@ -41,7 +40,6 @@
     html { scroll-behavior: smooth; }
     body { font-family: 'Montserrat', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; overflow-x: hidden; }
     
-    /* Trame de fond subtile style gaming / lignes de force */
     body::before { 
       content: ''; 
       position: fixed; 
@@ -91,7 +89,7 @@
     .section-title .dot { color: var(--accent); }
     .see-all { font-size: 0.8rem; color: var(--muted); text-decoration: none; letter-spacing: 1px; text-transform: uppercase; font-weight: 600; transition: color 0.2s; }
     .see-all:hover { color: var(--accent); }
-    .divider { border: none; border-top: 1px solid var(--border); }
+    .divider { border: none; border-top: 1px solid var(--border); margin: 0 auto; max-width: 1080px; }
 
     /* GRILLE VIDÉOS */
     .video-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
@@ -110,7 +108,7 @@
     .video-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.5; margin-bottom: 1rem; margin-top: auto; }
     .video-meta { font-size: 0.72rem; color: var(--muted); display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.04); padding-top: 0.75rem; }
     
-    /* BADGES TAGS (Inspirés par la géométrie claire) */
+    /* BADGES TAGS */
     .tag { font-size: 0.65rem; padding: 3px 10px; border-radius: 4px; letter-spacing: 0.5px; text-transform: uppercase; font-weight: 700; font-family: 'Outfit', sans-serif; }
     .tag-test { background: rgba(230, 57, 70, 0.12); color: #e63946; border: 1px solid rgba(230, 57, 70, 0.2); }
     .tag-guide { background: rgba(255, 159, 28, 0.1); color: #ff9f1c; border: 1px solid rgba(255, 159, 28, 0.2); }
@@ -134,11 +132,10 @@
     .read-time { font-size: 0.72rem; color: var(--muted); }
     .read-link { font-size: 0.78rem; color: var(--accent); font-weight: 600; }
 
-    /* A PROPOS / BOX BLOC AVATAR */
+    /* A PROPOS */
     .about-box { background: linear-gradient(145deg, var(--surface), var(--surface2)); border: 1px solid var(--border); border-radius: 16px; padding: 3rem; display: flex; gap: 2.5rem; align-items: center; }
     @media (max-width: 650px) { .about-box { flex-direction: column; text-align: center; padding: 2rem; } }
     
-    /* Intégration subtile de la forme ronde demandée pour le logo.png */
     .avatar { width: 110px; height: 110px; border-radius: 50%; background: var(--gradient-logo); padding: 3px; flex-shrink: 0; box-shadow: 0 8px 20px rgba(0,0,0,0.4); }
     .avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; background: var(--surface); }
     
@@ -151,7 +148,7 @@
     .social-btn:hover { border-color: var(--accent); color: var(--accent); background: rgba(255, 159, 28, 0.03); transform: translateY(-2px); }
 
     /* MENTIONS LEGALES */
-    .legal { max-width: 700px; margin: 0 auto; padding: 3rem 2rem; position: relative; z-index: 1; display: none; background: var(--surface); border-radius: 12px; border: 1px solid var(--border); margin-bottom: 4rem; }
+    .legal { max-width: 700px; margin: 2rem auto 4rem; padding: 3rem 2rem; position: relative; z-index: 1; display: none; background: var(--surface); border-radius: 12px; border: 1px solid var(--border); }
     .legal h2 { font-family: 'Syne', sans-serif; font-size: 1.4rem; font-weight: 800; margin-bottom: 1.5rem; text-transform: uppercase; }
     .legal h3 { font-size: 0.9rem; font-weight: 600; color: var(--accent); margin: 1.75rem 0 0.5rem; text-transform: uppercase; letter-spacing: 1px; }
     .legal p { font-size: 0.88rem; color: var(--muted); line-height: 1.75; }
@@ -169,10 +166,9 @@
     .stats-bar { animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both; }
   </style>
 
-  <!-- DONNÉES STRUCTURÉES VIDÉOS EXISTANTES -->
+  <!-- DONNÉES STRUCTURÉES VIDÉOS -->
   <script type="application/ld+json">
   {
-
     "@context": "https://schema.org",
     "@type": "VideoObject",
     "name": "Outward 2 Beta : Tout ce qu'il faut savoir pour survivre",
@@ -181,27 +177,23 @@
     "uploadDate": "2026-05-31T08:00:00+02:00",
     "contentUrl": "https://ariagamingfr.github.io/mon-site-ariagamingfr/#outward2",
     "embedUrl": "https://www.youtube.com/embed/6rOypDFm__U"
-
- 
   }
   </script>
   
   <script type="application/ld+json">
-  
   {
     "@context": "https://schema.org",
     "@type": "VideoObject",
-    "name": "Life below guide et avis",
+    "name": "Live below guide et avis",
     "description": "Découvrez mon avis et guide de gameplay en français sur le jeu vidéo indépendant Life Below. Guide de ce city-builder sous-marin par AriaGamingFR.",
     "thumbnailUrl": "https://img.youtube.com/vi/bqp1fVR527g/maxresdefault.jpg",
     "uploadDate": "2026-05-31T08:00:00+02:00",
-    "contentUrl": "https://ariagamingfr.github.io/mon-site-ariagamingfr/#life-below",
+    "contentUrl": "https://youtu.be/bqp1fVR527g",
     "embedUrl": "https://www.youtube.com/embed/bqp1fVR527g"
-
   }
-</script>
-    
-<!-- DONNÉES STRUCTURÉES : ASKA -->
+  </script>
+
+  <!-- DONNÉES STRUCTURÉES : ASKA -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -209,7 +201,7 @@
     "name": "ASKA FR | Bien Démarrer sa Tribu Viking (Guide débutant)",
     "description": "Guide débutant pour ASKA : comment bien démarrer ta tribu viking, gérer tes ressources et progresser rapidement en français.",
     "thumbnailUrl": "https://img.youtube.com/vi/TXwnMiNSGrE/maxresdefault.jpg",
-    "uploadDate": "2026-05-31T08:00:00+02:00",
+    "uploadDate": "2026-05-31",
     "contentUrl": "https://ariagamingfr.github.io/mon-site-ariagamingfr/#aska",
     "embedUrl": "https://www.youtube.com/embed/TXwnMiNSGrE"
   }
@@ -223,7 +215,7 @@
     "name": "Subnautica 2 guide français",
     "description": "Guide de démarrage pour Subnautica 2 : ressources essentielles, crafts et conseils pour survivre sous les mers.",
     "thumbnailUrl": "https://img.youtube.com/vi/ISSc8oM8jXw/maxresdefault.jpg",
-    "uploadDate": "2026-05-31T08:00:00+02:00",
+    "uploadDate": "2026-05-31",
     "contentUrl": "https://ariagamingfr.github.io/mon-site-ariagamingfr/#subnautica2",
     "embedUrl": "https://www.youtube.com/embed/ISSc8oM8jXw"
   }
@@ -237,7 +229,7 @@
     "name": "Test Aether and Iron — gameplay vidéo fr",
     "description": "Test gameplay de Aether and Iron : un RPG narratif à la Disco Elysium où l'on combat en voiture.",
     "thumbnailUrl": "https://img.youtube.com/vi/DoY4sIuGMzU/maxresdefault.jpg",
-    "uploadDate": "2026-05-31T08:00:00+02:00",
+    "uploadDate": "2026-05-31",
     "contentUrl": "https://ariagamingfr.github.io/mon-site-ariagamingfr/#aether-iron",
     "embedUrl": "https://www.youtube.com/embed/DoY4sIuGMzU"
   }
@@ -251,7 +243,7 @@
     "name": "Test The Séance of Blake Manor — gameplay vidéo fr",
     "description": "Test gameplay de The Séance of Blake Manor : aventure narrative à la première personne et enquête dans un manoir victorien.",
     "thumbnailUrl": "https://img.youtube.com/vi/dwuYf5HIyOU/maxresdefault.jpg",
-    "uploadDate": "2026-05-31T08:00:00+02:00",
+    "uploadDate": "2026-05-31",
     "contentUrl": "https://ariagamingfr.github.io/mon-site-ariagamingfr/#blake-manor",
     "embedUrl": "https://www.youtube.com/embed/dwuYf5HIyOU"
   }
@@ -265,7 +257,7 @@
     "name": "FOUNDATION FR | L'essentiel pour une Cité Optimisée (guide V1.11 / 2026)",
     "description": "Foundation guide débutant en français. Posez les fondations solides de votre économie pour bâtir un empire médiéval pérenne.",
     "thumbnailUrl": "https://img.youtube.com/vi/RQAGFvoOGUQ/maxresdefault.jpg",
-    "uploadDate": "2026-05-31T08:00:00+02:00",
+    "uploadDate": "2026-05-31",
     "contentUrl": "https://ariagamingfr.github.io/mon-site-ariagamingfr/#foundation",
     "embedUrl": "https://www.youtube.com/embed/RQAGFvoOGUQ"
   }
@@ -279,11 +271,10 @@
     "name": "Manor Lords – Bien débuter sa ville médiévale | Guide Gameplay Fr",
     "description": "Manor Lords guide débutant en français pour gérer au mieux sa colonie",
     "thumbnailUrl": "https://img.youtube.com/vi/7Lde4aejgqY/maxresdefault.jpg",
-    "uploadDate": "2026-05-31T08:00:00+02:00",
+    "uploadDate": "2026-05-31",
     "contentUrl": "https://ariagamingfr.github.io/mon-site-ariagamingfr/#manor-lords",
     "embedUrl": "https://www.youtube.com/embed/7Lde4aejgqY"
   }
- 
   </script>
 </head>
 <body>
@@ -314,10 +305,14 @@
   <div class="stat"><span class="stat-n">4</span><span class="stat-l">Tests écrits</span></div>
 </div>
 
-<hr class="divider">
+<!-- SECTION VIDÉOS ENVELOPPANTE AVEC ID MAQUETTE -->
+<section class="section" id="videos">
+  <div class="section-head">
+    <h2 class="section-title">Mes Vidéos<span class="dot">.</span></h2>
+    <a class="see-all" href="https://www.youtube.com/@ariagamingfr" target="_blank" rel="noopener">Voir sur YouTube →</a>
+  </div>
 
-<!-- VIDÉOS -->
-<div class="video-grid">
+  <div class="video-grid">
     <!-- Vidéo 1 : Outward 2 -->
     <a id="outward2" class="video-card" href="https://youtu.be/6rOypDFm__U" target="_blank" rel="noopener">
       <div class="video-thumb">
@@ -417,7 +412,7 @@
       </div>
       <div class="video-info">
         <p class="video-title">Manor Lords – Bien débuter sa ville médiévale | Guide Gameplay Fr</p>
-        <p class="video-desc">Manor Lords guide débutant pour gérer au mieux sa coloniet.</p>
+        <p class="video-desc">Manor Lords guide débutant pour gérer au mieux sa colonie.</p>
         <div class="video-meta"><span class="tag tag-guide">Guide</span><span>Manor Lords</span></div>
       </div>
     </a>
@@ -521,7 +516,6 @@
   </div>
   <div class="about-box">
     <div class="avatar">
-      <!-- Référence propre au fichier logo.png avec dégradé circulaire périphérique -->
       <img src="logo.png" alt="Aria Gaming FR">
     </div>
     <div class="about-text">
@@ -537,7 +531,7 @@
   </div>
 </section>
 
-<!-- MENTIONS LÉGALES -->
+<!-- MENTIONS LÉGALES TERMINÉES -->
 <div class="legal" id="legal">
   <h2>Mentions légales</h2>
   <h3>Éditeur du site</h3>
@@ -546,30 +540,33 @@
   <h3>Hébergement</h3>
   <p>Ce site est hébergé par GitHub Pages, service fourni par GitHub, Inc., 88 Colin P. Kelly Jr Street, San Francisco, CA 94107, États-Unis.</p>
   <h3>Propriété intellectuelle</h3>
-  <p>L'ensemble du contenu de ce site (textes, vidéos, images) est la propriété exclusive d'Aria Gaming FR, sauf mention contraire. Toute reproduction est interdite sans autorisation.</p>
-  <h3>Données personnelles</h3>
-  <p>Ce site ne collecte aucune donnée personnelle. Aucun cookie de tracking n'est utilisé.</p>
-  <h3>Liens externes</h3>
-  <p>Ce site contient des liens vers YouTube (Google LLC) et Medium. Aria Gaming FR n'est pas responsable du contenu de ces plateformes tierces.</p>
+  <p>L'ensemble du contenu de ce site (textes, vidéos, images) est protégé par le droit d'auteur. Toute reproduction sans accord préalable est interdite.</p>
 </div>
 
+<!-- FOOTER LOGIQUE ET PROPRE -->
 <footer>
   <div class="footer-links">
-    <a href="https://www.youtube.com/@ariagamingfr" target="_blank" rel="noopener">YouTube</a>
-    <a href="https://medium.com/@ariagamingfr" target="_blank" rel="noopener">Medium</a>
+    <a href="#videos">Vidéos</a>
+    <a href="#articles">Articles</a>
     <a href="#apropos">À propos</a>
-    <a href="#" onclick="toggleLegal(event)">Mentions légales</a>
+    <a href="#" onclick="toggleLegal(event)">Mentions Légales</a>
   </div>
-  <p class="footer-copy">© 2026 Aria Gaming FR · Tests &amp; Guides Gameplay en français · France 🌴</p>
+  <p class="footer-copy">&copy; 2026 AriaGamingFR. Tous droits réservés. Propulsé par GitHub Pages.</p>
 </footer>
 
+<!-- SCRIPT POUR FAIRE FONCTIONNER L'AFFICHAGE DU BLOC MENTIONS LEGALES -->
 <script>
-function toggleLegal(e) {
-  e.preventDefault();
-  var el = document.getElementById('legal');
-  el.style.display = el.style.display === 'block' ? 'none' : 'block';
-  if (el.style.display === 'block') el.scrollIntoView({ behavior: 'smooth' });
-}
+  function toggleLegal(event) {
+    event.preventDefault();
+    const legalBlock = document.getElementById('legal');
+    if (legalBlock.style.display === 'block') {
+      legalBlock.style.display = 'none';
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    } else {
+      legalBlock.style.display = 'block';
+      legalBlock.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 </script>
 
 </body>
