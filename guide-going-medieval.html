@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Going Medieval Guide Débutant FR — Bien démarrer sa colonie (1.0)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Guide débutant Going Medieval 1.0 en français : ressources, abri, nourriture, colons, recherche et défense — basé sur une vraie partie commentée par AriaGamingFR.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ariagamingfr.github.io/mon-site-ariagamingfr/guide-going-medieval.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Going Medieval 1.0 Guide Débutant FR — Bien démarrer sa colonie",
+  "description": "Guide complet pour bien débuter Going Medieval version 1.0 en français : priorités de départ, gestion des ressources, abri, nourriture, colons et défense par AriaGamingFR.",
+  "thumbnailUrl": "https://img.youtube.com/vi/EgsuNLhmRHM/maxresdefault.jpg",
+  "uploadDate": "2026-06-11",
+  "contentUrl": "https://www.youtube.com/watch?v=EgsuNLhmRHM",
+  "embedUrl": "https://www.youtube.com/embed/EgsuNLhmRHM",
+  "inLanguage": "fr",
+  "author": {
+    "@type": "Person",
+    "name": "Aria Gaming FR"
+  }
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #0f1115;
+  --card: #181c22;
+  --text: #eaeaea;
+  --muted: #a9a9a9;
+  --accent: #ff7b00;
+}
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: Montserrat, sans-serif; }
+.wrapper { display: flex; max-width: 1200px; margin: 0 auto; padding: 30px; gap: 30px; }
+.sidebar {
+  width: 260px; position: sticky; top: 20px; height: fit-content;
+  background: var(--card); padding: 18px; border-radius: 12px; border: 1px solid #222;
+}
+.sidebar h3 { font-family: Syne; color: var(--accent); margin-top: 0; }
+.sidebar a { display: block; color: var(--text); text-decoration: none; margin: 10px 0; font-size: 14px; opacity: 0.85; }
+.sidebar a:hover { color: var(--accent); opacity: 1; }
+.content { flex: 1; min-width: 0; }
+h1 { font-family: Syne; font-size: 2.4rem; }
+h2 { font-family: Syne; color: var(--accent); margin-top: 60px; }
+.card { background: var(--card); padding: 18px; border-radius: 12px; margin: 15px 0; border: 1px solid #222; }
+.meta { color: var(--muted); }
+.video-hero {
+  display: flex; gap: 20px; padding: 20px; margin-bottom: 30px;
+  background: linear-gradient(135deg, #1a1f27, #12151b); border-radius: 14px; border: 1px solid #222;
+}
+.video-box { flex: 1; aspect-ratio: 16/9; }
+.video-box iframe { width: 100%; height: 100%; border-radius: 10px; border: none; }
+.video-info { flex: 1; }
+.video-info p { color: var(--muted); }
+.video-link {
+  display: inline-block; margin-top: 10px; padding: 10px 14px;
+  border: 1px solid var(--accent); color: var(--accent); border-radius: 8px; text-decoration: none;
+}
+.back-button { display: inline-block; margin: 10px 0 20px; color: var(--muted); text-decoration: none; font-size: 14px; }
+.back-button:hover { color: var(--accent); }
+.tip { border-left: 4px solid var(--accent); padding: 12px; background: #1a1f27; margin: 15px 0; border-radius: 0 6px 6px 0; }
+.warning { border-left: 4px solid #ff3b3b; padding: 12px; background: #221515; margin: 15px 0; border-radius: 0 6px 6px 0; }
+.info { border-left: 4px solid #4aa3ff; padding: 12px; background: #151c22; margin: 15px 0; border-radius: 0 6px 6px 0; }
+@media (max-width: 900px) {
+  .wrapper { flex-direction: column; }
+  .sidebar { width: 100%; position: relative; }
+  .video-hero { flex-direction: column; }
+}
+</style>
+</head>
+
+<body>
+<div class="wrapper">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h3>Sommaire</h3>
+    <a href="#presentation">Le jeu &amp; la carte</a>
+    <a href="#ressources">Étape 1 — Ressources</a>
+    <a href="#equipement">Étape 2 — Équipement des colons</a>
+    <a href="#abri">Étape 3 — Abri &amp; couchage</a>
+    <a href="#bois">Étape 4 — Abattre les arbres</a>
+    <a href="#travaux">Étape 5 — Priorités de tâches</a>
+    <a href="#nourriture">Étape 6 — Nourriture &amp; cuisine</a>
+    <a href="#recherche">Étape 7 — Recherche</a>
+    <a href="#conservation">Étape 8 — Conservation</a>
+    <a href="#animaux">Étape 9 — Animaux &amp; champs</a>
+    <a href="#confort">Étape 10 — Confort &amp; loisirs</a>
+    <a href="#faq">Questions fréquentes</a>
+
+    <h3 style="margin-top:24px;">🎮 Le jeu</h3>
+    <p style="font-size:13px;color:var(--muted);margin:6px 0;">Version 1.0 — Mars 2026</p>
+    <a href="https://store.steampowered.com/app/1029780/Going_Medieval/" target="_blank" rel="noopener"
+       style="display:inline-block;margin-top:6px;padding:8px 12px;border:1px solid var(--accent);color:var(--accent);border-radius:8px;text-decoration:none;font-size:13px;">
+      Voir sur Steam
+    </a>
+  </aside>
+
+  <main class="content">
+
+    <!-- HERO VIDÉO -->
+    <section class="video-hero">
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/EgsuNLhmRHM" allowfullscreen></iframe>
+      </div>
+      <div class="video-info">
+        <h2 style="margin-top:0;">Guide Going Medieval</h2>
+        <p>Guide débutant version 1.0 — FR</p>
+        <a class="video-link" href="https://www.youtube.com/watch?v=EgsuNLhmRHM" target="_blank" rel="noopener">▶ Voir la vidéo</a>
+      </div>
+    </section>
+
+    <h1>Going Medieval 1.0 — Guide Débutant FR</h1>
+    <a href="index.html" class="back-button">← Retour à l'accueil</a>
+
+    <div class="card">
+      <p class="meta">
+        Guide basé sur une partie réelle commentée. Alfred, Marie et Rosia fondent leur colonie au premier jour du printemps 1353, sur une carte versant traversée par une rivière. On suit chaque décision de départ, de la réserve au fumoir, en passant par l'enclos à chèvres et les premières recherches.
+      </p>
+    </div>
+
+    <!-- PRÉSENTATION -->
+    <section id="presentation">
+      <h2>🗺️ Le jeu &amp; la carte</h2>
+      <div class="card">
+        <p>
+          Going Medieval se déroule dans une Angleterre ravagée par la Peste Noire. En 1353, des survivants décident de fuir les villes et de fonder une colonie en pleine campagne. Tu prends en charge leur survie : construire un abri, trouver de la nourriture, se défendre contre les raids et faire prospérer la colonie au fil des saisons.
+        </p>
+        <p>
+          La carte de type <strong>versant</strong> offre un terrain accidenté avec une rivière (pêche au brochet, truite, anguille), une cascade, et des gisements naturels : <strong>fer, calcaire, charbon et sel</strong>. Ce sont des ressources essentielles pour le mid-game.
+        </p>
+        <div class="info">
+          🌡️ <strong>Les températures varient selon les cases.</strong> Une case exposée au soleil est plus chaude qu'une case à l'ombre des arbres. Cela influence la dégradation des aliments et le confort des colons — c'est à prendre en compte dès le placement de tes bâtiments.
+        </div>
+      </div>
+    </section>
+
+    <!-- ÉTAPE 1 : RESSOURCES -->
+    <section id="ressources">
+      <h2>📦 Étape 1 — Sécuriser les ressources</h2>
+      <div class="card">
+        <p>
+          La toute première action à faire en début de partie est d'utiliser l'<strong>outil Autoriser</strong> pour activer les tas de ressources présents sur la carte. Sans ça, tes colons les ignorent complètement.
+        </p>
+        <p>
+          Cet outil permet aussi de <strong>visualiser toutes les ressources disponibles</strong> sur la carte — elles apparaissent en jaune. C'est utile pour repérer des tas d'argile, des carcasses d'animaux ou des ressources cachées sous les arbres que tu n'aurais pas vus autrement.
+        </p>
+        <p>
+          Ensuite, construis immédiatement un <strong>plancher en bois</strong> (onglet Base → En bois) et pose dessus une <strong>réserve</strong>. L'objectif est de surélever les ressources sensibles du sol le plus vite possible.
+        </p>
+        <div class="warning">
+          ⚠️ <strong>Pourquoi c'est urgent :</strong> les aliments posés directement sur le sol se dégradent rapidement, surtout sous forte chaleur. La pluie, la neige, les orages, les tempêtes de grêle et les inondations accélèrent encore la dégradation. Les matériaux de construction, eux, se dégradent très lentement — pas de panique de ce côté.
+        </div>
+        <div class="tip">
+          💡 <strong>Les chroniques (tas de livres)</strong> sont des points de science. Elles ne craignent pas la chaleur mais se dégradent vite si elles restent au sol. Mets-les sur un plancher en priorité.
+        </div>
+        <p>
+          Dans les paramètres de la réserve, tu peux <strong>exclure certaines catégories</strong> : pas besoin de mettre les matériaux bruts de construction ni les graines sur un plancher. Concentre la réserve sur la nourriture, les chroniques et les ressources précieuses.
+        </p>
+      </div>
+    </section>
+
+    <!-- ÉTAPE 2 : ÉQUIPEMENT -->
+    <section id="equipement">
+      <h2>⚔️ Étape 2 — Équiper les colons</h2>
+      <div class="card">
+        <p>
+          Avant de lancer la construction, équipe tes colons. Va dans <strong>Gestion → Armes</strong> et assigne les équipements selon les profils :
+        </p>
+        <p>
+          Un colon avec de bons <strong>points en Tir</strong> reçoit une arme à distance (arc). Les autres reçoivent une arme de corps à corps. Tu peux également forcer manuellement l'équipement d'un colon avec un clic droit sur l'objet souhaité.
+        </p>
+        <div class="tip">
+          💡 Ton colon en première ligne dans les combats corps à corps devrait aussi porter un <strong>bouclier et une veste matelassée</strong> pour encaisser plus de dégâts. Ce n'est pas anodin — un colon blessé dès le premier raid peut mettre toute la colonie en danger.
+        </div>
+      </div>
+    </section>
+
+    <!-- ÉTAPE 3 : ABRI -->
+    <section id="abri">
+      <h2>🏠 Étape 3 — Construire l'abri</h2>
+      <div class="card">
+        <p>
+          Tes colons ont besoin d'un <strong>toit et d'un couchage</strong> rapidement. Dormir à la belle étoile génère des malus d'humeur qui s'accumulent vite.
+        </p>
+        <p>
+          Construis des <strong>murs en bois</strong>, une porte, des fenêtres. Pour le couchage, préfère les <strong>lits en osier</strong> (branchages) aux couchages en foin — ces derniers diminuent la valeur esthétique de la pièce, ce qui impacte l'humeur des colons.
+        </p>
+        <p>
+          Pour le toit, tu as le choix entre chaume (deux bottes de foin), osier ou bois. Le <strong>toit en chaume</strong> est une bonne option de départ. Si tu prévois de construire un étage par-dessus plus tard, utilise plutôt un <strong>sol en planches</strong> comme plafond — ça te laisse la possibilité d'agrandir verticalement.
+        </p>
+        <div class="info">
+          🌿 <strong>Nouveauté de la version 1.0 :</strong> le lierre peut grimper sur les murs si tu construis ton bâtiment près d'un buisson de lierre. C'est purement esthétique mais ça donne un aspect organique très agréable.
+        </div>
+        <p>
+          Une fois la pièce fermée, affiche les <strong>pièces détectées</strong> (masque le toit pour voir l'intérieur). Si la pièce contient au moins deux lits et aucun poste de travail, elle est reconnue comme <strong>dortoir</strong> — ce qui ajoute un modificateur d'humeur positif pour les colons qui y dorment.
+        </p>
+        <div class="tip">
+          💡 Il fait sombre à l'intérieur — place des <strong>torches</strong> sur les murs pour améliorer l'éclairage. C'est un petit détail qui contribue à l'humeur et à l'esthétisme de la pièce.
+        </div>
+      </div>
+    </section>
+
+    <!-- ÉTAPE 4 : BOIS -->
+    <section id="bois">
+      <h2>🌲 Étape 4 — Abattre les arbres</h2>
+      <div class="card">
+        <p>
+          Pour construire, tu as besoin de bois. Utilise l'<strong>outil Abattre</strong> et commence par les <strong>arbres morts ou pourris</strong> — ils apparaissent en jaune et tu peux les sélectionner tous d'un coup avec le filtre "Pourri". Aucun remord à les couper.
+        </p>
+        <p>
+          Quand tu passes aux arbres sains, <strong>privilégie les arbres matures</strong> : un arbre mature donne 50 bois contre seulement 15 pour un arbre en pleine croissance. Chaque arbre abattu donne aussi des branchages et une graine replantable.
+        </p>
+        <div class="tip">
+          💡 Ne déforeste pas tout d'un coup. Replante des arbres au fur et à mesure pour assurer un stock de bois durable. Planter des arbres autour d'un entrepôt crée également de l'ombre, ce qui réduit naturellement la température intérieure en été.
+        </div>
+      </div>
+    </section>
+
+    <!-- ÉTAPE 5 : TRAVAUX -->
+    <section id="travaux">
+      <h2>⚙️ Étape 5 — Priorités de tâches</h2>
+      <div class="card">
+        <p>
+          Dans l'onglet <strong>Travaux</strong>, tu définis la priorité des tâches de chaque colon — comme dans RimWorld. Le jeu détecte automatiquement les compétences principales et met une priorité élevée dessus, mais tu peux tout ajuster.
+        </p>
+        <p>
+          En début de partie, une répartition efficace ressemble à ça : un colon spécialisé en <strong>construction et transport</strong>, un colon dédié à <strong>l'agriculture et la cuisine</strong>, et un troisième plus polyvalent pour boucher les trous.
+        </p>
+        <div class="info">
+          ⭐ <strong>Les étoiles jaunes</strong> indiquent qu'un colon est passionné par une tâche. Il gagnera quatre fois plus d'expérience dans cette compétence et recevra des modificateurs d'humeur positifs en la pratiquant. À l'inverse, les étoiles rouges signalent des tâches que le colon déteste — mets-les à zéro pour éviter les malus d'humeur.
+        </div>
+        <p>
+          Configure également le <strong>calendrier</strong> de chaque colon : heures de sommeil, de travail, de temps libre et de loisir. Évite de mettre tout le monde en loisir en même temps — décale les plages pour garder de l'activité en continu.
+        </p>
+        <div class="tip">
+          💡 Au début de partie, tous les colons bénéficient d'un bonus d'humeur "optimisme initial" de +25 pendant environ 6 jours. Profites-en pour travailler dur sans trop t'inquiéter des divertissements — c'est une fenêtre précieuse.
+        </div>
+      </div>
+    </section>
+
+    <!-- ÉTAPE 6 : NOURRITURE -->
+    <section id="nourriture">
+      <h2>🍖 Étape 6 — Nourriture &amp; cuisine</h2>
+      <div class="card">
+        <p>
+          Les colons ont besoin de manger régulièrement. Pour éviter les allers-retours constants vers la réserve, donne à chacun une <strong>sacoche avec un repas emballé</strong> — ils gèrent leur nourriture de manière autonome pendant les longues sessions de travail.
+        </p>
+        <p>
+          Construis un <strong>feu de camp</strong> et des <strong>chaises en osier</strong> à proximité. Les colons n'aiment pas manger debout — un malus d'humeur s'applique s'ils n'ont pas de siège.
+        </p>
+        <p>
+          Pour produire un <strong>repas simple</strong> au feu de camp, il faut 24 ingrédients culinaires et un combustible. Dans les paramètres du feu de camp, tu peux :
+        </p>
+        <p>✅ Choisir quels ingrédients sont autorisés (exclure la viande humaine crue, par exemple)</p>
+        <p>✅ Choisir les combustibles utilisés (exclure le bois pour le conserver à la construction)</p>
+        <p>✅ Limiter l'accès au feu aux colons avec un niveau de cuisine minimum (niveau 5 recommandé)</p>
+        <p>✅ Protéger les aliments très frais en excluant ceux avec une fraîcheur supérieure à 98 %</p>
+        <div class="tip">
+          💡 <strong>Sources de nourriture en début de partie :</strong> champignons, prunes (pruniers sauvages), mûres noires (ronciers matures), groseilles, et carcasses d'animaux. Ramasse les carcasses rapidement — elles sont une excellente source de viande mais pourrissent vite si tu les laisses au sol.
+        </div>
+        <div class="warning">
+          ⚠️ <strong>Sous la pluie</strong>, le feu de camp est moins efficace. Pense à le couvrir avec un sol ou à le placer sous une terrasse pour maintenir sa performance par mauvais temps.
+        </div>
+      </div>
+    </section>
+
+    <!-- ÉTAPE 7 : RECHERCHE -->
+    <section id="recherche">
+      <h2>🔬 Étape 7 — La recherche</h2>
+      <div class="card">
+        <p>
+          Construis une <strong>salle de recherche</strong> fermée (avec toit) et place-y une <strong>table de recherche</strong>. C'est ce bâtiment qui débloque l'arbre de technologies du jeu.
+        </p>
+        <p>
+          Assigne à la recherche le colon avec le <strong>meilleur score en Intelligence</strong>. Les autres colons (constructeur, agricultrice) peuvent être exclus de cette tâche pour rester concentrés sur leurs priorités.
+        </p>
+        <p>
+          Les <strong>chroniques</strong> (livres ramassés au sol) servent de points de science. Elles sont produites à la table de recherche et permettent de débloquer les technologies.
+        </p>
+        <div class="tip">
+          💡 <strong>Ordre de recherche recommandé pour débuter :</strong>
+          <br>1. <strong>Poutre en bois</strong> — permet d'avoir des toits plus grands et de préparer les futurs étages
+          <br>2. <strong>Champs de culture</strong> — indispensable avant l'hiver pour assurer la nourriture
+          <br>3. <strong>Conservation des aliments</strong> — débloque le fumoir et les étagères alimentaires
+          <br>4. <strong>Mobilier</strong> — lits, chaises, bibliothèques pour améliorer le confort des colons
+        </div>
+      </div>
+    </section>
+
+    <!-- ÉTAPE 8 : CONSERVATION -->
+    <section id="conservation">
+      <h2>🥩 Étape 8 — Conserver les aliments</h2>
+      <div class="card">
+        <p>
+          Une fois la recherche <strong>Conservation des aliments</strong> débloquée, construis un <strong>fumoir en argile</strong>. La viande fumée se conserve bien plus longtemps que la viande crue — c'est indispensable pour passer l'hiver sans perte.
+        </p>
+        <p>
+          Ajoute des <strong>étagères alimentaires</strong> dans le fumoir ou à proximité pour stocker la viande fumée proprement. Les colons les remplissent automatiquement dès que la production est lancée.
+        </p>
+        <p>
+          Pour la viande fraîche, crée une <strong>petite réserve dédiée</strong> à côté de la zone d'abattage (carcasses + viande crue). Ça évite des allers-retours inutiles entre la zone de chasse et le stockage principal.
+        </p>
+        <div class="tip">
+          💡 Programme le fumoir en <strong>mode continu</strong> : dès qu'il y a de la viande disponible, il fume automatiquement. Tu n'as pas besoin de le surveiller constamment.
+        </div>
+      </div>
+    </section>
+
+    <!-- ÉTAPE 9 : ANIMAUX & CHAMPS -->
+    <section id="animaux">
+      <h2>🐐 Étape 9 — Animaux &amp; champs</h2>
+      <div class="card">
+        <p>
+          Pour domestiquer des animaux (chèvres, par exemple), construis un <strong>enclos fermé avec une porte</strong>. À l'intérieur, place une <strong>auge</strong> pour la nourriture des animaux et une <strong>balise</strong> pour sélectionner quelles espèces tu veux y mettre.
+        </p>
+        <p>
+          Ton colon avec des points en <strong>Dressage</strong> partira automatiquement récupérer les animaux avec un licol. Les chèvres ont besoin de foin — constitue un stock suffisant avant l'hiver car l'herbe disparaît sous la neige.
+        </p>
+        <div class="tip">
+          💡 Crée une petite réserve de foin avec une <strong>priorité très élevée</strong> et exclue-la de la réserve principale couverte. Ça évite que tes colons aillent chercher le foin trop loin et simplifie la gestion de l'enclos.
+        </div>
+        <p>
+          Pour les <strong>champs</strong>, choisis des cases bien ensoleillées pour maximiser les rendements. Des cultures variées sont recommandées : choux, carottes, betteraves pour la nourriture, lin pour le tissu plus tard. Tu peux également planter des groseillers ou des mûriers pour une source de nourriture passive.
+        </p>
+        <div class="info">
+          🛒 <strong>Le marchand de passage</strong> arrive parfois tôt dans la partie. Réveille ton colon avec les meilleurs points en <strong>Discours</strong> pour négocier. Tu peux acheter des graines manquantes (betterave, carottes, chou, lin) et vendre tes surplus (compotes, chroniques). Équilibre la transaction avec des pièces d'or si nécessaire.
+        </div>
+      </div>
+    </section>
+
+    <!-- ÉTAPE 10 : CONFORT & LOISIRS -->
+    <section id="confort">
+      <h2>😊 Étape 10 — Confort &amp; loisirs</h2>
+      <div class="card">
+        <p>
+          L'humeur des colons est un système détaillé dans Going Medieval. Chaque colon a des jauges à surveiller : <strong>nourriture, sommeil, activité religieuse, divertissement, esthétisme et confort</strong>. Si l'une d'elles tombe trop bas, des malus s'accumulent et la productivité chute.
+        </p>
+        <p>
+          Pour les loisirs, commence par le <strong>lancer d'anneau</strong> (50 bois) — c'est la distraction la plus accessible en début de partie. Elle permet à tes colons de se détendre pendant leurs heures libres.
+        </p>
+        <p>
+          Une <strong>bibliothèque</strong> (débloquée avec la recherche Mobilier) améliore l'esthétisme des pièces. Un <strong>lit confortable</strong> remplace le lit en osier et améliore la qualité du sommeil. Améliore progressivement les chambres au fur et à mesure que tes ressources le permettent.
+        </p>
+        <div class="tip">
+          💡 Consulte régulièrement la <strong>fiche de personnage</strong> de chaque colon (onglet Humeur) pour voir quels besoins sont en souffrance. Chaque colon a aussi un profil physique qui a un impact réel : un colon de grande taille se déplace plus vite, un colon mature négocie mieux avec les marchands.
+        </div>
+        <div class="info">
+          🏗️ <strong>Prochaine étape logique :</strong> une fois la colonie stabilisée (nourriture, abri, défense, recherche active), pense à construire un <strong>étage</strong> sur tes bâtiments existants pour des chambres plus confortables — et à commencer à travailler la <strong>défense périmétrique</strong> avant que les raids ne s'intensifient.
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <h2>❓ Questions fréquentes</h2>
+
+      <div class="card">
+        <p><strong>Going Medieval ressemble à quel jeu ?</strong><br>
+        C'est le RimWorld médiéval en 3D. La gestion des besoins individuels des colons, les raids et le système de compétences sont directement inspirés de RimWorld. La construction en hauteur sur plusieurs étages est une mécanique propre à Going Medieval.</p>
+      </div>
+
+      <div class="card">
+        <p><strong>Going Medieval est-il disponible en français ?</strong><br>
+        Oui, l'interface et les menus sont traduits en français. Les voix sont en anglais.</p>
+      </div>
+
+      <div class="card">
+        <p><strong>Going Medieval est-il difficile pour un débutant ?</strong><br>
+        Le mode Normal est accessible mais exigeant sur les priorités. Le premier hiver et les premiers raids éliminent les colonies mal préparées. Suis l'ordre des étapes de ce guide et tu devrais passer les 3 premières saisons sans problème.</p>
+      </div>
+
+      <div class="card">
+        <p><strong>Quelle est la différence entre Going Medieval et Manor Lords ?</strong><br>
+        Manor Lords est centré sur la gestion économique et l'urbanisme médiéval. Going Medieval est plus axé survie, gestion des besoins individuels des colons et défense — dans la veine de RimWorld. Les deux sont excellents et complémentaires si tu aimes le médiéval.</p>
+      </div>
+
+      <div class="card">
+        <p><strong>Combien de temps pour une partie complète ?</strong><br>
+        Une colonie bien établie représente facilement 30 à 60 heures. Le jeu est en mode bac à sable sans fin imposée.</p>
+      </div>
+
+      <div class="card">
+        <p><strong>Going Medieval a-t-il un mode multijoueur ?</strong><br>
+        Non, le jeu est uniquement solo.</p>
+      </div>
+
+    </section>
+
+  </main>
+</div>
+</body>
+</html>
